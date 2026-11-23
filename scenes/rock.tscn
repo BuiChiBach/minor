@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ba3k2qfmx6mm2"]
+
+[ext_resource type="Script" uid="uid://b8m2epiey0rkj" path="res://scripts/rock.gd" id="1_mek2u"]
+[ext_resource type="Resource" uid="uid://q8gogioqylhb" path="res://data/rocks/iron.tres" id="2_ik6fu"]
+[ext_resource type="AudioStream" uid="uid://dpriexuoamyjy" path="res://assets/audio/rock_hit.wav" id="4_872ht"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ik6fu"]
+radius = 7.0
+
+[node name="Rock" type="StaticBody2D" unique_id=705104595]
+scale = Vector2(3, 3)
+script = ExtResource("1_mek2u")
+data = ExtResource("2_ik6fu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=623977524]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=989994945]
+shape = SubResource("CircleShape2D_ik6fu")
+
+[node name="RockBreakingSound" type="AudioStreamPlayer2D" parent="." unique_id=808066290]
+stream = ExtResource("4_872ht")

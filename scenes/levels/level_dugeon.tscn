@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cvb4vdbsgs52y"]
+
+[ext_resource type="PackedScene" uid="uid://b16s24byfjclm" path="res://scenes/levels/map_1.tscn" id="1_1waht"]
+[ext_resource type="Script" uid="uid://dbdkkuhjpygbl" path="res://scripts/level_dugeon.gd" id="1_6gl4j"]
+[ext_resource type="PackedScene" uid="uid://kbbir1ya0yss" path="res://scenes/player.tscn" id="1_w36q3"]
+[ext_resource type="PackedScene" uid="uid://ba3k2qfmx6mm2" path="res://scenes/rock.tscn" id="2_ohhai"]
+[ext_resource type="Resource" uid="uid://dc7b1yxktsy5y" path="res://data/rocks/stone.tres" id="4_bh0nu"]
+
+[node name="LevelDugeon" type="Node2D" unique_id=910940061]
+script = ExtResource("1_6gl4j")
+
+[node name="Map" parent="." unique_id=1099835358 instance=ExtResource("1_1waht")]
+
+[node name="RockContainer" type="Node2D" parent="." unique_id=1753251816]
+
+[node name="Rock" parent="RockContainer" unique_id=705104595 instance=ExtResource("2_ohhai")]
+position = Vector2(-154.99994, 469)
+data = ExtResource("4_bh0nu")
+
+[node name="OreContainer" type="Node2D" parent="." unique_id=1246050219]
+
+[node name="Player" parent="." unique_id=193952588 instance=ExtResource("1_w36q3")]
+position = Vector2(-150, 343)
